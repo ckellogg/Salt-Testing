@@ -1,5 +1,8 @@
 users:
-    dumbo: something
-    mike: jordan
-    john: flush
+  dumbo: something
+    # password: something
+    # grants: select
+    # database: me
+  mike: jordan
+  john: flush
     

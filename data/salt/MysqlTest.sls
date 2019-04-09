@@ -14,6 +14,7 @@ installMysql:
     service.running:
         - name: mariadb
 
+#creating Users for mysql
 {% for user, pass in pillar.get('users', {}).items() %}
 {{user}}:
     mysql_user.present:
