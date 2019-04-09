@@ -15,9 +15,21 @@ installMysql:
         - name: mariadb
 
 #creating Users for mysql
-{% for user, pass in pillar.get('users', {}).items() %}
-{{user}}:
+{% for user, info in pillar.get('users', {}).items() %}
+{{ user }}:
     mysql_user.present:
         - host: localhost
-        - password: {{pass}}
+        - password: {{ info[0] }}
+{% endfor %}
+
+createDatabase:
+    mysql_database.present:
+        - name: mainDB
+
+{% for user, info in pillar.get('users', {}).items() %}
+{{ user }}_DbGrants:
+    mysql_grants.present:
+        - grant: {{ info.grants }}
+        - database: mainDB.*
+        - user: {{ user }}
 {% endfor %}
