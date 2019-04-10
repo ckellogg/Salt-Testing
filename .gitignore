@@ -1,6 +1,7 @@
-files/grains
-files/minion
+files/*
 docker-compose.yml
 saltcmd
 .vagrant/*
 Vagrantfile
+.gitignore
+
