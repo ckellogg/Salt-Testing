@@ -1,3 +1,0 @@
-# Uncomment this to set specific name of minion
-#id: mdb01.dev.dev
-master: 10.0.2.2
