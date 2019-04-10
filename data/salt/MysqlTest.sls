@@ -29,7 +29,7 @@ createDatabase:
 {% for user, info in pillar.get('users', {}).items() %}
 {{ user }}_DbGrants:
     mysql_grants.present:
-        - grant: {{ info.grants }}
+        - grant: {{ info[1] }}
         - database: mainDB.*
         - user: {{ user }}
 {% endfor %}
