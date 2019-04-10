@@ -1,6 +1,0 @@
-files/grains
-files/minion
-docker-compose.yml
-saltcmd
-.vagrant/*
-Vagrantfile
