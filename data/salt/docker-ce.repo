@@ -1,0 +1,11 @@
+###################################
+# THIS FILE IS MANAGED BY SALT    #
+# ANY CHANGES WILL BE OVERWRITTEN #
+###################################
+
+[docker-ce-stable]
+name=Docker CE Stable - $basearch
+baseurl=https://repo.dev.tgp.digicert.com/repository/docker-ce-el$releasever-$basearch
+enabled=1
+gpgcheck=1
+gpgkey=https://repo.dev.tgp.digicert.com/repository/raw-repo/docker-ce.gpg
